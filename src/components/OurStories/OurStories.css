@@ -1,0 +1,25 @@
+#our-stories-section{
+    background-color: #F9F9F9;
+}
+#our-stories-section .row{
+    align-items: center;
+}
+.countup-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.countup-item span{
+    font-size: 40px;
+    font-family: 'Bungee Inline', cursive;
+    color: #EA721D;
+}
+.story-thumbnail img{
+    width: 75%;
+}
+.countup-item {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(51, 51, 51, 0.158);
+    text-align: center;
+    padding: 30px 20px;
+}

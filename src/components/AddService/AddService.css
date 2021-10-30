@@ -1,0 +1,24 @@
+.form-wrapper{
+    width: 40%;
+    border: 1px solid #ccc;
+    padding: 60px 40px;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+.btn-regular{
+    background-image: linear-gradient(to right, #E2620A, #FA9443);
+    color: #FFF;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+    border-radius: 5px;
+}
+.add-service-section{
+    padding: 30px 0 60px 0;
+}
+.form-title{
+    font-family: 'Bungee Inline', cursive;
+    color: #435555;
+    font-size: 25px;
+}

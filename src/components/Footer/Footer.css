@@ -1,0 +1,13 @@
+#footer-section{
+    padding: 60px 0;
+    background-color: #F9F9F9;
+}
+.footer-logo{
+    text-align: center;
+}
+.footer-logo a:link,
+.footer-logo a:visited{
+    font-family: 'Bungee Inline', cursive;
+    color: #EA721D;
+    font-size: 50px;
+}

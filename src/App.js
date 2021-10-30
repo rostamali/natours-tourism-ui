@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AddService from './components/AddService/AddService';
+import Banner from './components/Banner/Banner';
+import Booking from './components/Booking/Booking';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import ManageOrders from './components/ManageOrders/ManageOrders';
+import MyOrder from './components/MyOrder/MyOrder';
+import OurStories from './components/OurStories/OurStories';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Services from './components/Services/Services';
+import SignIn from './components/SignIn/SignIn';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <AuthProvider>
+          <Router>
+            <Header></Header>
+            <Switch>
+              <Route exact path="/">
+                <Banner></Banner>
+                <Services></Services>
+                <OurStories></OurStories>
+              </Route>
+              <Route path="/home">
+                <Banner></Banner>
+                <Services></Services>
+                <OurStories></OurStories>
+              </Route>
+              <Route path="/addService">
+                <AddService></AddService>
+              </Route>
+              <PrivateRoute path="/service/:serviceId">
+                <Booking></Booking>
+              </PrivateRoute>
+              <Route path="/signIn">
+                <SignIn></SignIn>
+              </Route>
+              <PrivateRoute path="/myorder">
+                <MyOrder></MyOrder>
+              </PrivateRoute>
+              <Route path="/totalOrders">
+                <ManageOrders></ManageOrders>
+              </Route>
+            </Switch>
+            <Footer></Footer>
+          </Router>
+        </AuthProvider>
+      </>
   );
 }
 

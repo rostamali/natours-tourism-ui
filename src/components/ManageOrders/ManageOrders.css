@@ -1,0 +1,9 @@
+#manage-order{
+    padding: 50px 0;
+}
+.btn-box button{
+    margin: 0 4px;
+}
+.order-item .row{
+    align-items: center;
+}

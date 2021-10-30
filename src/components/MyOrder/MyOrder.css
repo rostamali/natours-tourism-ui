@@ -1,0 +1,22 @@
+.order-thumbnail img{
+    width: 100px;
+    border-radius: 10px;
+}
+.order-item {
+    background-color: #F9F9F9;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.my-order-section{
+    padding: 50px 0;
+}
+
+@media only screen and (max-width: 768px){
+    .order-thumbnail,
+    .order-package-info,
+    .order-status,
+    .btn-box{
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,20 @@
+.btn-signin{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: none;
+}
+.signin-section{
+    padding: 100px 0;
+}
+.signin-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+.google-thumbnail{
+    margin-right: 20px;
+}
+.google-thumbnail img{
+    width: 40px;
+}
