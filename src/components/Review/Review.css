@@ -1,0 +1,35 @@
+.review-text{
+    color: #B7B8B9;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+.adventurers-name{
+    color: #4A5B5B;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.adventurers-title{
+    color: #A5A7A8;
+    font-size: 16px;
+    font-weight: 400;
+}
+.review-rating{
+    margin: 8px 0;
+}
+.review-rating span{
+    font-size: 15px;
+}
+.fa.fa-star.fa-2x{
+    color: #EA721D;
+}
+.fa.fa-star-o.fa-2x{
+    color: #4A5B5B;
+}
+@media only screen and (max-width: 500px){
+    .review-text{
+        font-size: 15px;
+        text-align: justify;
+    }
+}

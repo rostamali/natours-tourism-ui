@@ -11,6 +11,7 @@ const Services = () => {
 
     const [data, setData] = useState([]);
     useEffect(()=>{
+
         fetch('https://intense-earth-41554.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setData(data));
@@ -37,20 +38,21 @@ const Services = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         nextArrow: <NextNavButton/>,
         prevArrow: <PrevNavButton/>,
         responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 10001,
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                infinite: true,
-                dots: true
+                infinite: true
               }
             },
             {
-              breakpoint: 900,
+              breakpoint: 1000,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -58,7 +60,7 @@ const Services = () => {
               }
             },
             {
-              breakpoint: 600,
+              breakpoint: 768,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -69,9 +71,8 @@ const Services = () => {
         arrows: true
     };
 
-
     return (
-        <div className="service-packages">
+        <div id="service-packages">
             <div className="container">
                 <div className="service-section-header">
                     <h2 className="section-title">

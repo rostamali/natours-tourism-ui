@@ -75,9 +75,9 @@ const ManageOrders = () => {
 
                 const currentStatus = totalOrders.find(order => order._id === id);
                 currentStatus["status"] = "Active";
-                const remaining = totalOrders.filter(d=> d._id !== id);
-                let filterData = [...remaining, currentStatus];
-                setTotalOrders(filterData);
+                const remaining = totalOrders.filter(d=> d);
+                // let filterData = [...remaining, currentStatus];
+                setTotalOrders(remaining);
 
                 const MySwal = withReactContent(Swal);
                 MySwal.fire({

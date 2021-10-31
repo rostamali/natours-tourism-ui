@@ -20,6 +20,22 @@
 .user-img{
     margin-left: 15px;
 }
+.fas.fa-bars{
+    color: #435555;
+}
+.navbar-toggler{
+    border: 1px solid #435555;
+}
+.user-name {
+    background-image: linear-gradient(to right, #E2620A, #FA9443);
+    padding: 6px 10px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.user-name:hover{
+    color: #FFF;
+}
 @media only screen and (min-width: 768px){
     .navbar-nav{
         align-items: center;
@@ -27,8 +43,20 @@
 }
 .navbar-toggler:focus{
     box-shadow: none;
+    border: 1px solid #435555;
 }
 button.navbar-link{
     border: none;
     background-color: transparent;
+}
+.navbar-collapse .navbar-nav {
+    align-items: center;
+}
+@media only screen and (max-width: 992px){
+    .navbar-collapse .navbar-nav {
+        align-items: start;
+    }
+    .navbar-link{
+        margin-left: 0;
+    }
 }

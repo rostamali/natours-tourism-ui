@@ -47,6 +47,7 @@ const AddService = () => {
                         <input className="form-control mb-3" type="url" {...register("serviceImage", { required: true })} placeholder="Image URL" />
                         <input className="form-control mb-3" type="text" {...register("serviceLocation", { required: true })} placeholder="Location" />
                         <input className="form-control mb-3" type="number" {...register("servicePrice", { min: 1 })} placeholder="Price" />
+                        <textarea className="form-control mb-3 form-desc" {...register("serviceDesc")} placeholder="Package Description" />
                         <input className="btn-regular" type="submit" value="Add New Package" />
                     </form>
                 </div>

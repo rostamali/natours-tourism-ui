@@ -14,7 +14,7 @@
     color: #EA721D;
 }
 .story-thumbnail img{
-    width: 75%;
+    width: 85%;
 }
 .countup-item {
     background-color: #FFF;
@@ -22,4 +22,17 @@
     box-shadow: 0 0 30px rgba(51, 51, 51, 0.158);
     text-align: center;
     padding: 30px 20px;
+}
+
+@media only screen and (max-width: 576px){
+    .countup-item{
+        width: 50%;
+        margin: 10px auto;
+    }
+}
+@media only screen and (max-width: 425px){
+    .countup-item{
+        width: 80%;
+        margin: 10px auto;
+    }
 }

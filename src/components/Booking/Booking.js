@@ -55,6 +55,9 @@ const Booking = () => {
                             <img src={singleData.serviceImage} alt="" className="img-fluid" />
                             <h3 className="service-title text-center">{singleData.serviceName}</h3>
                             <p className="service-location text-center">{singleData.serviceLocation}</p>
+                            <p className="description px-4">
+                                {singleData.serviceDesc}
+                            </p>
                             <div className="service-price-info text-center">
                                 <h2 className="service-price"><span className="text-color">$</span>{singleData.servicePrice}<span className="text-person"> /Person</span></h2>
                             </div>
@@ -62,7 +65,7 @@ const Booking = () => {
                     </div>
                     <div className="col-md-8 col-12">
                         <div className="order-form-wrapper">
-                            <h3 class="form-title text-center mb-3">Book Now Tour Package</h3>
+                            <h3 className="form-title text-center mb-3">Book Now Tour Package</h3>
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="order-input-group">
                                     <label>Name</label>
@@ -77,8 +80,12 @@ const Booking = () => {
                                     <input className="form-control mb-3" type="tel" {...register("userPhone", { required: true })} placeholder="Your Phone" />
                                 </div>
                                 <div className="order-input-group">
+                                    <label>Address</label>
+                                    <input className="form-control mb-3" type="text" {...register("userAddress", { required: true })} placeholder="Your Address" />
+                                </div>
+                                <div className="order-input-group">
                                     <label>Person</label>
-                                    <input className="form-control mb-3" type="number" {...register("personNumber", { min: 1})} placeholder="Person" />
+                                    <input className="form-control mb-3" type="number" {...register("personNumber", { min: 1})} placeholder="Person Number" />
                                 </div>
                                 <input className="btn-regular" type="submit" value="Book Now" />
                             </form>

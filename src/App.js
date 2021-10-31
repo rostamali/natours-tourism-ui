@@ -9,6 +9,7 @@ import ManageOrders from './components/ManageOrders/ManageOrders';
 import MyOrder from './components/MyOrder/MyOrder';
 import OurStories from './components/OurStories/OurStories';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Reviews from './components/Reviews/Reviews';
 import Services from './components/Services/Services';
 import SignIn from './components/SignIn/SignIn';
 import AuthProvider from './context/AuthProvider';
@@ -24,15 +25,17 @@ function App() {
                 <Banner></Banner>
                 <Services></Services>
                 <OurStories></OurStories>
+                <Reviews></Reviews>
               </Route>
               <Route path="/home">
                 <Banner></Banner>
                 <Services></Services>
                 <OurStories></OurStories>
+                <Reviews></Reviews>
               </Route>
-              <Route path="/addService">
+              <PrivateRoute path="/addService">
                 <AddService></AddService>
-              </Route>
+              </PrivateRoute>
               <PrivateRoute path="/service/:serviceId">
                 <Booking></Booking>
               </PrivateRoute>
@@ -42,9 +45,9 @@ function App() {
               <PrivateRoute path="/myorder">
                 <MyOrder></MyOrder>
               </PrivateRoute>
-              <Route path="/totalOrders">
+              <PrivateRoute path="/manageBookings">
                 <ManageOrders></ManageOrders>
-              </Route>
+              </PrivateRoute>
             </Switch>
             <Footer></Footer>
           </Router>

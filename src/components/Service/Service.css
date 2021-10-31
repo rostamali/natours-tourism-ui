@@ -86,3 +86,67 @@
 .slick-track {
     margin-top: 60px;
 }
+.description{
+    color: #949C9C;
+    font-size: 15px;
+    text-align: justify;
+    margin: 8px 0;
+}
+
+@media only screen and (max-width:1400px){
+    .service-title{
+        font-size: 30px;
+    }
+    .service-price{
+        font-size: 35px;
+    }
+    .service-price .text-person{
+        font-weight: 400;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:1200px){
+    .service-title{
+        font-size: 25px;
+    }
+    .service-price{
+        font-size: 28px;
+    }
+    .service-location{
+        font-size: 18px;
+    }
+    .service-price .text-person{
+        font-size: 18px;
+    }
+    .service-btn a{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width:1000px){
+    .res-slick-prev{
+        right: 10%;
+    }
+}
+@media only screen and (max-width:768px){
+    .res-slick-prev{
+        right: 12%;
+    }
+}
+@media only screen and (max-width:550px){
+    .res-slick-prev{
+        right: 14%;
+    }
+    .slick-arrow{
+        top: 20px;
+    }
+}
+@media only screen and (max-width:450px){
+    .res-slick-prev{
+        right: 16%;
+    }
+}
+@media only screen and (max-width:360px){
+    .res-slick-prev{
+        right: 22%;
+    }
+}

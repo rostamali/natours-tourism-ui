@@ -11,12 +11,12 @@ const Header = () => {
 
     return (
         <>
-            <Navbar expand="md" className="navbar-bg">
+            <Navbar expand="lg" className="navbar-bg">
                 <Container>
                     <Navbar.Brand>
                         <NavLink className="navbar-logo" to="/">Natours</NavLink>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"><i class="fas fa-bars"></i></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <NavLink 
@@ -32,7 +32,7 @@ const Header = () => {
                             activeStyle={{
                                 color : "#EA721D"
                             }}
-                            to="/myorder">My Orders</NavLink>
+                            to="/myorder">My Bookings</NavLink>
                         }    
                         {
                             user.email &&
@@ -41,14 +41,17 @@ const Header = () => {
                             activeStyle={{
                                 color : "#EA721D"
                             }}
-                            to="/totalOrders">Manage All Orders</NavLink>
+                            to="/manageBookings">Manage All Bookings</NavLink>
                         }
-                        <NavLink 
+                        {
+                            user.email &&
+                            <NavLink 
                             className="navbar-link"
                             activeStyle={{
                                 color : "#EA721D"
                             }}
                             to="/addService">Add New Package</NavLink>
+                        }
                         {
                             !user.email &&
                             <NavLink 
@@ -58,13 +61,17 @@ const Header = () => {
                             }}
                             to="/signIn">Sign in</NavLink>
                         }
-                        {
+                        {/* {
                             user.photoURL && 
                             <span className="user-img"><img src={user.photoURL} alt={user.displayName} /></span>
-                        }
+                        } */}
                         {
                             user.email && 
                             <button className="navbar-link" onClick={handleSignOut}>Sign Out</button>
+                        }
+                        {
+                            user.displayName && 
+                            <span className="navbar-link user-name">{user.displayName}</span>
                         }
                     </Nav>
                     </Navbar.Collapse>

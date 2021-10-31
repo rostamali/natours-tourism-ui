@@ -1,5 +1,5 @@
 import React from 'react';
-import ourStoryImg from '../../images/image-1.png';
+import ourStoryImg from '../../images/our-stories.png';
 import './OurStories.css';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
